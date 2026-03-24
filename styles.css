@@ -1,0 +1,84 @@
+body {
+  font-family: "Playwrite NZ Basic", cursive;
+  background: #31264e;
+}
+
+.container {
+  background: whitesmoke;
+  padding: 20px;
+  width: 600px;
+  margin: 70px auto;
+  border-radius: 10px;
+}
+form {
+  text-align: center;
+  padding-bottom: 30px;
+  border-bottom: 1px solid #d4a6e5;
+}
+.name-city {
+  background: #31264e;
+  font-size: 20px;
+  padding: 20px;
+  border-radius: 15px;
+  border: none;
+  width: 75%;
+  color: white;
+}
+.name-city::placeholder {
+  color: white;
+  opacity: 0.9;
+  font-family: "Playwrite NZ Basic", cursive;
+}
+.search-city {
+  background: #31264e;
+  font-size: 15px;
+  color: white;
+  padding: 20px;
+  border-radius: 15px;
+  border: none;
+  font-family: "Playwrite NZ Basic", cursive;
+}
+h1 {
+  font-size: 45px;
+  margin: 25px auto;
+  color: #31264e;
+}
+p strong {
+  color: rgb(139, 36, 117);
+}
+.details {
+  line-height: 1.4;
+  font-size: 18px;
+}
+.current-temperature {
+  display: flex;
+  justify-content: right;
+  margin-bottom: -50px;
+}
+.current-temperature {
+  position: relative;
+  top: -120px;
+}
+.current-temperature-icon {
+  font-size: 38px;
+  position: relative;
+  top: 25px;
+}
+.current-temperature-number {
+  font-size: 70px;
+  font-weight: bold;
+  color: #31264e;
+}
+.current-temperature-unit {
+  font-size: 30px;
+  position: relative;
+  top: 10px;
+  color: #31264e;
+}
+footer {
+  text-align: center;
+  border-top: 1px solid #d4a6e5;
+}
+a {
+  color: rgb(139, 36, 117);
+}
