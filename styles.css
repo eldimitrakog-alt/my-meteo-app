@@ -25,6 +25,7 @@ form {
   border: none;
   width: 75%;
   color: white;
+  outline: none;
 }
 .name-city::placeholder {
   color: white;
