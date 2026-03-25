@@ -1,23 +1,24 @@
 body {
   font-family: "Playwrite NZ Basic", cursive;
-  background: #31264e;
+  background: #0a7685;
 }
 
 .container {
-  background: whitesmoke;
+  background-image: url("../images/clouds.jpg");
   padding: 20px;
   width: 600px;
   margin: 70px auto;
   border-radius: 10px;
+  background-size: 100% 100%;
 }
 form {
   text-align: center;
   padding-bottom: 30px;
-  border-bottom: double #31264e;
+  border-bottom: double #352f44;
 }
 
 .name-city {
-  background: #31264e;
+  background: #0a7685;
   font-size: 20px;
   padding: 20px;
   border-radius: 15px;
@@ -31,7 +32,7 @@ form {
   font-family: "Playwrite NZ Basic", cursive;
 }
 .search-city {
-  background: #31264e;
+  background: #0a7685;
   font-size: 15px;
   color: white;
   padding: 20px;
@@ -42,7 +43,7 @@ form {
 h1 {
   font-size: 45px;
   margin: 25px auto;
-  color: #31264e;
+  color: #352f44;
 }
 p strong {
   color: rgb(139, 36, 117);
@@ -50,6 +51,7 @@ p strong {
 .details {
   line-height: 1.4;
   font-size: 18px;
+  color: #085964;
 }
 .current-temperature {
   display: flex;
@@ -68,7 +70,7 @@ p strong {
 .current-temperature-number {
   font-size: 70px;
   font-weight: bold;
-  color: #31264e;
+  color: #352f44;
 }
 .current-temperature-unit {
   font-size: 30px;
@@ -78,7 +80,7 @@ p strong {
 }
 footer {
   text-align: center;
-  border-top: double #31264e;
+  border-top: double #352f44;
   padding: 20px 0 0 0;
   font-size: 14px;
   color: rgba(0, 0, 0, 0.8);
