@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="src/styles.css" />
+    
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -12,33 +12,35 @@
       href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=Playwrite+NZ+Basic:wght@100..400&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
       rel="stylesheet"/>
       <link rel="stylesheet" href="styles.css" />
+      <script src="https://unpkg.com/axios@1.13.2/dist/axios.min.js"></script>
     <title> MyMeteo </title>
   </head>
   <body>
     <div class="container">
       <header>
-        <form>
-          <input
-            type="search"
-            placeholder="Enter a city.."
-            required
-            class="name-city"
-          />
-          <input type="submit" value="Search" class="search-city" />
-        </form>
-      </header>
+        <form id="search-form">
+  <input
+    type="search"
+    placeholder="Enter a city.."
+    required
+    class="name-city"
+    id="search-input"
+  />
+  <input type="submit" value="Search" class="search-city" />
+</form>
+          </header>
       <main>
         <div class="current-weather">
           <div>
-            <h1>Paris</h1>
-            <p class="details">
-              Saturday <strong>15:32</strong>, moderate rain <br />
-              Humidity: <strong>87%</strong>, Wind: <strong>7.2 km/h</strong>
-            </p>
+            <h1 id="current-city">Paris</h1>
+          <p class="details" id="current-date">
+  Saturday <strong>15:32</strong>, moderate rain <br />
+  Humidity: <strong>87%</strong>, Wind: <strong>7.2 km/h</strong>
+</p>
           </div>
           <div class="current-temperature">
             <span class="current-temperature-icon">☀️</span>
-            <span class="current-temperature-number">14</span>
+            <span class="current-temperature-number current-temperature-value">14</span>
             <span class="current-temperature-unit">°C</span>
           </div>
         </div>
@@ -46,7 +48,7 @@
    
     <footer>Coded by <a href="https://github.com/eldimitrakog-alt" target="_blank"> Elisavet Dimitrakogianni </a> ,
         is open-sourced on <a href="https://github.com/eldimitrakog-alt/my-meteo-app"  target="_blank">GitHub </a> and
-            web hosted by <a href="https://my-meteoapp.netlify.app/" target="_blank"> Netlify</a>
+            web hosted by <a href="https://my-meteo-app-1q9k.onrender.com/" target="_blank"> Render</a>
     </footer>
     <script src="index.js"></script>
   </body>
