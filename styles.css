@@ -1,15 +1,17 @@
 body {
-  font-family: "Playwrite NZ Basic", cursive;
+  font-family: "Playwrite NZ Basic", cursive, sans-serif;
   background: #0a7685;
 }
 
 .container {
   background-image: url("../images/clouds.jpg");
   padding: 20px;
-  width: 600px;
-  margin: 70px auto;
+  max-width: 600px;
+  width: 90%;
+  margin: 40px auto;
   border-radius: 10px;
-  background-size: 100% 100%;
+  background-size: cover;
+  background-position: center;
 }
 form {
   text-align: center;
@@ -56,13 +58,12 @@ p strong {
 }
 .current-temperature {
   display: flex;
-  justify-content: right;
+  justify-content: flex-end;
   margin-bottom: -50px;
-}
-.current-temperature {
   position: relative;
   top: -120px;
 }
+
 .current-temperature-icon {
   font-size: 38px;
   position: relative;
