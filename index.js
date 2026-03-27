@@ -1,9 +1,9 @@
 let apiKey = "0t6ef4f887495d65a4537f2face0bo0b";
 
 function formatDate(date) {
-  let minutes = date.getMinutes();
-  let hours = date.getHours();
-  let day = date.getDay();
+  let minutes = date.getUTCMinutes();
+  let hours = date.getUTCHours();
+  let day = date.getUTCDay();
 
   if (minutes < 10) {
     minutes = `0${minutes}`;
@@ -35,8 +35,6 @@ function displayTemperature(response) {
   let icon = response.data.condition.icon_url;
 
   let timestamp = response.data.time;
-  let timezoneOffset = response.data.timezone;
-
   let localTime = new Date(timestamp * 1000);
 
   document.querySelector("#current-city").innerHTML = city;
