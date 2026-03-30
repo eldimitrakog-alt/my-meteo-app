@@ -46,10 +46,10 @@ form {
 h1 {
   font-size: 45px;
   margin: 25px auto;
-  color: #352f44;
+  color: #2a3a47;
 }
 p strong {
-  color: rgb(139, 36, 117);
+  color: rgb(128, 31, 107);
 }
 .details {
   line-height: 1.4;
@@ -72,14 +72,43 @@ p strong {
 .current-temperature-number {
   font-size: 70px;
   font-weight: bold;
-  color: #352f44;
+  color: #2a3a47;
 }
 .current-temperature-unit {
   font-size: 30px;
   position: relative;
   top: 10px;
-  color: #31264e;
+  color: #2a3a47;
 }
+.weather-forecast {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 30px;
+}
+.weather-forecast-date {
+  text-align: center;
+  color: #085964;
+  font-size: 18px;
+  line-height: 15px;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+.weather-forecast-icon {
+  font-size: 30px;
+  text-align: center;
+}
+.weather-forecast-temperatures {
+  text-align: center;
+  color: rgb(139, 36, 117);
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+}
+.weather-forecast-temperature {
+  padding: 0 8px;
+  margin-bottom: 15px;
+}
+
 footer {
   text-align: center;
   border-top: double #352f44;
