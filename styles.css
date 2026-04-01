@@ -43,6 +43,11 @@ form {
   border: none;
   font-family: "Playwrite NZ Basic", cursive;
 }
+.name-city:focus {
+  background: #0a7685;
+  color: white;
+}
+
 h1 {
   font-size: 45px;
   margin: 25px auto;

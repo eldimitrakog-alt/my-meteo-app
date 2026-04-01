@@ -60,7 +60,7 @@ function searchCity(city) {
 function search(event) {
   event.preventDefault();
   let city = document.querySelector("#search-input").value.trim();
-  searchCity(searchInput.value);
+  searchCity(city);
 }
 
 function displayForecast() {
@@ -91,6 +91,6 @@ function displayForecast() {
 document.querySelector("#search-form").addEventListener("submit", search);
 
 window.addEventListener("load", function () {
-  searchCity("Berlin");
   displayForecast();
+  searchCity("Berlin");
 });
