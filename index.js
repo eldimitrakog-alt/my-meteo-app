@@ -47,6 +47,44 @@ function displayTemperature(response) {
   `;
 }
 
+function displayForecast(response) {
+  let forecast = response.data.daily;
+  let forecastHtml = "";
+
+  forecast.forEach(function (day, index) {
+    if (index > 0 && index < 6) {
+      let date = new Date(day.time * 1000);
+      let dayName = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"][
+        date.getUTCDay()
+      ];
+      let maxTemp = Math.round(day.temperature.maximum);
+      let minTemp = Math.round(day.temperature.minimum);
+      let icon = day.condition.icon_url;
+      let description = day.condition.description;
+
+      forecastHtml += `
+        <div class="weather-forecast-day">
+          <div class="weather-forecast-date">${dayName}</div>
+          <div class="weather-forecast-icon">
+            <img src="${icon}" alt="${description}" class="weather-forecast-img" />
+          </div>
+          <div class="weather-forecast-temperatures">
+            <div class="weather-forecast-temperature"><strong>${maxTemp}º</strong></div>
+            <div class="weather-forecast-temperature">${minTemp}º</div>
+          </div>
+        </div>
+      `;
+    }
+  });
+
+  document.querySelector("#forecast").innerHTML = forecastHtml;
+}
+
+function getForecast(city) {
+  let apiUrl = `https://api.shecodes.io/weather/v1/forecast?query=${city}&key=${apiKey}&units=metric`;
+  axios(apiUrl).then(displayForecast);
+}
+
 function searchCity(city) {
   let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}&units=metric`;
   axios
@@ -61,36 +99,12 @@ function search(event) {
   event.preventDefault();
   let city = document.querySelector("#search-input").value.trim();
   searchCity(city);
-}
-
-function displayForecast() {
-  let days = ["Tue", "Wed", "Thu", "Fri", "Sat"];
-  let forecastHtml = "";
-
-  days.forEach(function (day) {
-    forecastHtml =
-      forecastHtml +
-      `
-      <div class="weather-forecast-day">
-        <div class="weather-forecast-date">${day}</div>
-        <div class="weather-forecast-icon">🌤️</div>
-        <div class="weather-forecast-temperatures">
-          <div class="weather-forecast-temperature">
-            <strong>15º</strong>
-          </div>
-          <div class="weather-forecast-temperature">9º</div>
-        </div>
-      </div>
-    `;
-  });
-
-  let forecastElement = document.querySelector("#forecast");
-  forecastElement.innerHTML = forecastHtml;
+  getForecast(city);
 }
 
 document.querySelector("#search-form").addEventListener("submit", search);
 
 window.addEventListener("load", function () {
-  displayForecast();
   searchCity("Berlin");
+  getForecast("Berlin");
 });
